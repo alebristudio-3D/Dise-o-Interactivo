@@ -1,185 +1,863 @@
-(() => {
-  const root = document.querySelector("#dasc-diseno-interactivo");
-  if (!root) return;
+/* =========================================================
+   DASC Diseño Interactivo
+   Archivo: styles.css
+   Nota: cambia URL_DE_LA_IMAGEN_HERO y URL_DEL_LOGO_DASC
+========================================================= */
 
-  const semesters = [
-    {
-      label: "Primer semestre",
-      title: "Fundamentos creativos y tecnológicos",
-      subjects: [
-        "Introducción al diseño interactivo",
-        "Dibujo I",
-        "Diseño de algoritmos",
-        "Ingeniería para la creatividad",
-        "Teoría del diseño",
-        "Metodología de la investigación",
-        "Taller de lectura y redacción"
-      ]
-    },
-    {
-      label: "Segundo semestre",
-      title: "Narrativa, programación y animación inicial",
-      subjects: [
-        "Administración de proyectos",
-        "Dibujo II",
-        "Programación para el diseño",
-        "Guionismo",
-        "Historia del arte",
-        "Fundamentos de la animación",
-        "Inglés I"
-      ]
-    },
-    {
-      label: "Tercer semestre",
-      title: "Proyectos interactivos y representación digital",
-      subjects: [
-        "Proyecto interactivo I",
-        "Técnicas de representación digital",
-        "Programación de interactivos",
-        "Escultura",
-        "Fotografía artística",
-        "Tipografía",
-        "Inglés II"
-      ]
-    },
-    {
-      label: "Cuarto semestre",
-      title: "Modelado, fotografía y diseño sonoro",
-      subjects: [
-        "Proyecto interactivo II",
-        "Modelado 3D I",
-        "Arte y sociedad",
-        "Fotografía digital",
-        "Animación 2D",
-        "Diseño sonoro",
-        "Inglés III",
-        "Mercadotecnia"
-      ]
-    },
-    {
-      label: "Quinto semestre",
-      title: "Producción audiovisual y eventos interactivos",
-      subjects: [
-        "Escultura digital",
-        "Programación orientada a eventos",
-        "Producción de video digital",
-        "Animación 3D I",
-        "Ética profesional",
-        "Inglés IV",
-        "Doblaje y locución"
-      ]
-    },
-    {
-      label: "Sexto semestre",
-      title: "Videojuegos, efectos y visualización avanzada",
-      subjects: [
-        "Proyecto interactivo III",
-        "Investigación de mercados",
-        "Desarrollo de videojuegos",
-        "Efectos especiales",
-        "Animación 3D II",
-        "Modelado 3D II",
-        "Diseño de información visual",
-        "Expresión verbal en el ámbito profesional"
-      ]
-    },
-    {
-      label: "Séptimo semestre",
-      title: "Interfaces, móviles y ambientes virtuales",
-      subjects: [
-        "Seminario de tesis",
-        "Ambientes virtuales",
-        "Desarrollo de aplicaciones móviles",
-        "Captura de movimiento",
-        "Iluminación y render",
-        "Desarrollo de interfaces",
-        "Diseño de experiencia y usabilidad"
-      ]
-    },
-    {
-      label: "Octavo semestre",
-      title: "Proyecto final, web, marca y estrategia digital",
-      subjects: [
-        "Proyecto interactivo IV",
-        "Sostenibilidad y competitividad",
-        "Arquitectura y diseño para la web",
-        "Derecho para el diseño",
-        "Comportamiento organizacional",
-        "Interacción cognitiva",
-        "Marketing digital",
-        "Diseño de marca e imagen"
-      ]
-    }
-  ];
+:root {
+  --dasc-page-bg: #f8f4fb;
+}
 
-  const list = root.querySelector(".dasc-di-subjects");
-  const title = root.querySelector(".dasc-di-semester-title");
-  const label = root.querySelector(".dasc-di-semester-label");
-  const tabs = root.querySelectorAll(".dasc-di-tab");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: var(--dasc-page-bg);
+}
 
-  function renderSemester(index) {
-    const semester = semesters[index];
-    if (!semester || !list || !title || !label) return;
+#dasc-diseno-interactivo {
+  --accent: #bf1bcc;
+  --accent-strong: #f235ff;
+  --cyan: #34e7ff;
+  --paper: #fbf7ff;
+  --dark: #17111f;
+  --muted: #4e4559;
+  --bg: #f8f4fb;
+  --line: rgba(255, 255, 255, 0.14);
+  --max: 1180px;
+  --hero-image: url("./assets/hero-diseno-interactivo.png");
+  --logo-image: url("./assets/logo-DASC-Blanco.png");
 
-    label.textContent = semester.label;
-    title.textContent = semester.title;
+  display: block;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  color: var(--paper);
+  background: var(--bg);
+  font-family: "Montserrat", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(17px, 1.06vw, 20px);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: left;
+  text-transform: none;
+  overflow: hidden;
+  isolation: isolate;
+  box-sizing: border-box;
+}
 
-    list.innerHTML = semester.subjects
-      .map((subject) => `<li>${subject}</li>`)
-      .join("");
+#dasc-diseno-interactivo,
+#dasc-diseno-interactivo *,
+#dasc-diseno-interactivo *::before,
+#dasc-diseno-interactivo *::after {
+  box-sizing: border-box;
+}
 
-    tabs.forEach((tab, tabIndex) => {
-      const active = tabIndex === index;
-      tab.classList.toggle("active", active);
-      tab.setAttribute("aria-selected", String(active));
-    });
+#dasc-diseno-interactivo h1,
+#dasc-diseno-interactivo h2,
+#dasc-diseno-interactivo h3,
+#dasc-diseno-interactivo p,
+#dasc-diseno-interactivo ul,
+#dasc-diseno-interactivo li {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+
+#dasc-diseno-interactivo ul,
+#dasc-diseno-interactivo ol {
+  list-style: none;
+}
+
+#dasc-diseno-interactivo a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#dasc-diseno-interactivo button,
+#dasc-diseno-interactivo input,
+#dasc-diseno-interactivo textarea {
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: inherit;
+  box-shadow: none;
+  outline: none;
+}
+
+#dasc-diseno-interactivo img,
+#dasc-diseno-interactivo svg,
+#dasc-diseno-interactivo video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* HERO */
+
+#dasc-diseno-interactivo .dasc-di-hero {
+  position: relative;
+  display: grid;
+  min-height: 86vh;
+  align-items: center;
+  padding: 112px max(24px, calc((100vw - var(--max)) / 2)) 56px;
+  isolation: isolate;
+  background-image:
+    linear-gradient(90deg, rgba(5, 4, 8, 0.94) 0%, rgba(7, 5, 12, 0.82) 34%, rgba(7, 5, 12, 0.36) 66%, rgba(7, 5, 12, 0.7) 100%),
+    linear-gradient(180deg, rgba(5, 4, 8, 0.2), #09070f 96%),
+    var(--hero-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#dasc-diseno-interactivo .dasc-di-header {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  z-index: 20;
+  display: flex;
+  width: min(calc(100% - 32px), var(--max));
+  min-height: 62px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 10px 12px 10px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(8, 6, 13, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transform: translateX(-50%);
+}
+
+#dasc-diseno-interactivo .dasc-di-brand,
+#dasc-diseno-interactivo .dasc-di-nav,
+#dasc-diseno-interactivo .dasc-di-actions,
+#dasc-diseno-interactivo .dasc-di-metrics,
+#dasc-diseno-interactivo .dasc-di-contact-links {
+  display: flex;
+  align-items: center;
+}
+
+#dasc-diseno-interactivo .dasc-di-brand {
+  gap: 10px;
+  font-weight: 800;
+  min-width: 0;
+}
+
+#dasc-diseno-interactivo .dasc-di-mark {
+  position: relative;
+  display: block;
+  width: 142px;
+  height: 42px;
+  border-radius: 8px;
+  background: var(--logo-image) left center / contain no-repeat;
+  filter: drop-shadow(0 0 16px rgba(191, 27, 204, 0.42));
+}
+
+#dasc-diseno-interactivo .dasc-di-brand-text {
+  display: none;
+}
+
+#dasc-diseno-interactivo .dasc-di-nav {
+  gap: 22px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+#dasc-diseno-interactivo .dasc-di-nav a {
+  color: rgba(255, 255, 255, 0.76);
+  transition: color 180ms ease;
+}
+
+#dasc-diseno-interactivo .dasc-di-nav a:hover {
+  color: #ffffff;
+}
+
+/* BOTONES */
+
+#dasc-diseno-interactivo .dasc-di-button,
+#dasc-diseno-interactivo a.dasc-di-button,
+#dasc-diseno-interactivo button.dasc-di-button {
+  display: inline-flex;
+  min-height: 44px;
+  width: auto;
+  max-width: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0 18px;
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+  text-transform: none;
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+#dasc-diseno-interactivo .dasc-di-button:hover {
+  transform: translateY(-2px);
+}
+
+#dasc-diseno-interactivo .dasc-di-button.primary {
+  color: white;
+  background: linear-gradient(135deg, var(--accent), #7612e8);
+  box-shadow: 0 18px 44px rgba(191, 27, 204, 0.28);
+}
+
+#dasc-diseno-interactivo .dasc-di-button.ghost {
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+#dasc-diseno-interactivo .dasc-di-button.ghost.dark {
+  color: #17111f;
+  border-color: rgba(23, 17, 31, 0.18);
+  background: rgba(23, 17, 31, 0.04);
+}
+
+/* CONTENIDO HERO */
+
+#dasc-diseno-interactivo .dasc-di-hero-content {
+  width: min(730px, 100%);
+  position: relative;
+  z-index: 2;
+}
+
+#dasc-diseno-interactivo .dasc-di-eyebrow {
+  margin: 0 0 14px;
+  color: var(--cyan);
+  font-size: 0.8rem;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+#dasc-diseno-interactivo h1 {
+  max-width: 9ch;
+  margin: 0 0 24px;
+  color: white;
+  font-size: clamp(4.7rem, 10vw, 9.6rem);
+  line-height: 0.86;
+  letter-spacing: -0.05em;
+  font-weight: 900;
+}
+
+#dasc-diseno-interactivo h2 {
+  color: #17111f;
+  font-size: clamp(2.45rem, 4.8vw, 4.7rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  font-weight: 800;
+  margin: 0;
+}
+
+#dasc-diseno-interactivo h3 {
+  margin: 0 0 12px;
+  color: inherit;
+  font-size: 1.22rem;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+#dasc-diseno-interactivo .dasc-di-copy {
+  max-width: 660px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: clamp(1.12rem, 2vw, 1.42rem);
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+#dasc-diseno-interactivo .dasc-di-actions {
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 34px 0;
+}
+
+#dasc-diseno-interactivo .dasc-di-metrics {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#dasc-diseno-interactivo .dasc-di-metrics span,
+#dasc-diseno-interactivo .dasc-di-registry {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px 14px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+#dasc-diseno-interactivo .dasc-di-metrics strong {
+  color: #ffffff;
+  font-weight: 900;
+  margin-right: 4px;
+}
+
+#dasc-diseno-interactivo .dasc-di-panel {
+  position: absolute;
+  right: max(24px, calc((100vw - var(--max)) / 2));
+  bottom: 56px;
+  z-index: 3;
+  width: min(390px, calc(100% - 48px));
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(12, 8, 18, 0.76);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 18px;
+}
+
+#dasc-diseno-interactivo .dasc-di-panel-kicker {
+  display: block;
+  margin: 0 0 14px;
+  color: var(--cyan);
+  font-size: 0.74rem;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+#dasc-diseno-interactivo .dasc-di-stack-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  min-height: 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+#dasc-diseno-interactivo .dasc-di-stack-item span {
+  color: var(--accent-strong);
+  font-weight: 900;
+}
+
+/* SECCIONES */
+
+#dasc-diseno-interactivo .dasc-di-section {
+  display: block;
+  padding: 96px max(24px, calc((100vw - var(--max)) / 2));
+  color: #17111f;
+  background: #f8f4fb;
+}
+
+#dasc-diseno-interactivo .dasc-di-intro {
+  padding-top: 64px;
+}
+
+#dasc-diseno-interactivo .dasc-di-section-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: start;
+}
+
+#dasc-diseno-interactivo .dasc-di-section p {
+  margin: 0 0 18px;
+  color: #4e4559;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  font-weight: 500;
+}
+
+#dasc-diseno-interactivo .dasc-di-section p:last-child {
+  margin-bottom: 0;
+}
+
+#dasc-diseno-interactivo .dasc-di-section .dasc-di-eyebrow {
+  color: var(--accent);
+}
+
+#dasc-diseno-interactivo .dasc-di-heading {
+  max-width: 850px;
+  margin: 0 0 34px;
+}
+
+/* CARDS */
+
+#dasc-diseno-interactivo .dasc-di-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+#dasc-diseno-interactivo .dasc-di-card,
+#dasc-diseno-interactivo .dasc-di-work article,
+#dasc-diseno-interactivo .dasc-di-form {
+  border: 1px solid rgba(18, 12, 28, 0.12);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 22px 60px rgba(39, 14, 49, 0.08);
+}
+
+#dasc-diseno-interactivo .dasc-di-card {
+  min-height: 292px;
+  padding: 24px;
+}
+
+#dasc-diseno-interactivo .dasc-di-card p,
+#dasc-diseno-interactivo .dasc-di-work p {
+  color: #4e4559;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+#dasc-diseno-interactivo .dasc-di-icon {
+  display: grid;
+  width: 58px;
+  aspect-ratio: 1;
+  margin: 0 0 28px;
+  place-items: center;
+  border-radius: 8px;
+  color: white;
+  background: #17111f;
+  box-shadow: inset 0 -18px 34px rgba(191, 27, 204, 0.38);
+  font-size: 0.95rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* LISTAS */
+
+#dasc-diseno-interactivo .dasc-di-list {
+  display: grid;
+  gap: 12px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+#dasc-diseno-interactivo .dasc-di-list li,
+#dasc-diseno-interactivo .dasc-di-subjects li {
+  position: relative;
+  padding-left: 24px;
+  color: inherit;
+  font-size: 1rem;
+  line-height: 1.55;
+  font-weight: 600;
+}
+
+#dasc-diseno-interactivo .dasc-di-list li::before,
+#dasc-diseno-interactivo .dasc-di-subjects li::before {
+  position: absolute;
+  left: 0;
+  top: 0.35em;
+  color: var(--accent);
+  content: "■";
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+/* PLAN */
+
+#dasc-diseno-interactivo .dasc-di-registry {
+  margin-top: 18px;
+  color: #57435f;
+  background: rgba(191, 27, 204, 0.08);
+  border-color: rgba(191, 27, 204, 0.2);
+}
+
+#dasc-diseno-interactivo .dasc-di-tabs {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(44px, 1fr));
+  gap: 8px;
+  margin: 36px 0 18px;
+}
+
+#dasc-diseno-interactivo .dasc-di-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  width: 100%;
+  border: 1px solid rgba(22, 14, 30, 0.16);
+  border-radius: 8px;
+  color: #17111f;
+  background: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+#dasc-diseno-interactivo .dasc-di-tab.active {
+  color: white;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+#dasc-diseno-interactivo .dasc-di-semester {
+  display: grid;
+  grid-template-columns: 0.88fr 1.12fr;
+  gap: 36px;
+  min-height: 342px;
+  border-radius: 8px;
+  background: #15101d;
+  color: white;
+  padding: 34px;
+  overflow: hidden;
+  position: relative;
+}
+
+#dasc-diseno-interactivo .dasc-di-semester-label {
+  margin: 0 0 8px;
+  color: var(--cyan);
+  font-size: 0.82rem;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+#dasc-diseno-interactivo .dasc-di-semester-title {
+  color: #ffffff;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-weight: 800;
+  margin: 0;
+}
+
+#dasc-diseno-interactivo .dasc-di-subjects {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* SESIÓN INFORMATIVA */
+
+#dasc-diseno-interactivo .dasc-di-info-session {
+  background:
+    radial-gradient(circle at 15% 30%, rgba(191, 27, 204, 0.18), transparent 32%),
+    radial-gradient(circle at 85% 50%, rgba(52, 231, 255, 0.16), transparent 34%),
+    #15101d;
+  color: white;
+}
+
+#dasc-diseno-interactivo .dasc-di-info-session h2 {
+  color: #ffffff;
+}
+
+#dasc-diseno-interactivo .dasc-di-info-session p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+#dasc-diseno-interactivo .dasc-di-session-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr);
+  gap: 34px;
+  align-items: stretch;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.055);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.28);
+  overflow: hidden;
+}
+
+#dasc-diseno-interactivo .dasc-di-session-content {
+  padding: 42px;
+}
+
+#dasc-diseno-interactivo .dasc-di-session-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+}
+
+#dasc-diseno-interactivo .dasc-di-session-points span {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.88);
+  padding: 14px;
+  font-size: 0.95rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+#dasc-diseno-interactivo .dasc-di-session-box {
+  display: grid;
+  align-content: center;
+  gap: 14px;
+  padding: 34px;
+  background: linear-gradient(160deg, rgba(191, 27, 204, 0.22), rgba(52, 231, 255, 0.09));
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+#dasc-diseno-interactivo .dasc-di-session-detail {
+  display: grid;
+  gap: 4px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+#dasc-diseno-interactivo .dasc-di-session-detail strong {
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 900;
+}
+
+#dasc-diseno-interactivo .dasc-di-session-detail span {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+/* CAMPO LABORAL */
+
+#dasc-diseno-interactivo .dasc-di-work {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(220px, 1fr));
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+#dasc-diseno-interactivo .dasc-di-work article {
+  min-height: 240px;
+  padding: 24px;
+}
+
+/* VENTAJAS */
+
+#dasc-diseno-interactivo .dasc-di-advantages {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: 44px;
+  align-items: start;
+}
+
+#dasc-diseno-interactivo .dasc-di-advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+#dasc-diseno-interactivo .dasc-di-advantages-grid span {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(191, 27, 204, 0.18);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(191, 27, 204, 0.1), rgba(52, 231, 255, 0.08));
+  padding: 18px;
+  color: #17111f;
+  font-size: 1rem;
+  font-weight: 850;
+  line-height: 1.3;
+}
+
+/* CONTACTO */
+
+#dasc-diseno-interactivo .dasc-di-contact {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(320px, 0.72fr);
+  gap: 50px;
+  align-items: center;
+}
+
+#dasc-diseno-interactivo .dasc-di-contact-links {
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+#dasc-diseno-interactivo .dasc-di-form {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+  margin: 0;
+}
+
+#dasc-diseno-interactivo .dasc-di-form label {
+  display: grid;
+  gap: 8px;
+  color: #4b4154;
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+#dasc-diseno-interactivo .dasc-di-form input,
+#dasc-diseno-interactivo .dasc-di-form textarea {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid rgba(23, 17, 31, 0.16);
+  border-radius: 8px;
+  background: #fbf8ff;
+  color: #17111f;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  padding: 13px 14px;
+  resize: vertical;
+}
+
+#dasc-diseno-interactivo .dasc-di-form textarea {
+  min-height: 110px;
+}
+
+#dasc-diseno-interactivo .dasc-di-form input:focus,
+#dasc-diseno-interactivo .dasc-di-form textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(191, 27, 204, 0.12);
+}
+
+#dasc-diseno-interactivo .dasc-di-form button {
+  width: 100%;
+}
+
+/* WHATSAPP FLOTANTE */
+
+#dasc-diseno-interactivo .dasc-di-floating-wa {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 9999;
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border-radius: 50%;
+  background: #25d366;
+  color: #ffffff;
+  box-shadow: 0 18px 40px rgba(37, 211, 102, 0.32);
+  font-size: 1.8rem;
+  line-height: 1;
+  font-weight: 900;
+}
+
+#dasc-diseno-interactivo .dasc-di-floating-wa:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 980px) {
+  #dasc-diseno-interactivo .dasc-di-nav {
+    display: none;
   }
 
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      renderSemester(Number(tab.dataset.semester));
-    });
-  });
-
-  renderSemester(0);
-
-  const waLinks = root.querySelectorAll(".dasc-di-wa-link");
-
-  waLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      if (typeof window.gtag === "function") {
-        window.gtag("event", "click_whatsapp", {
-          programa: "diseno_interactivo",
-          origen: link.dataset.waOrigin || "landing_diseno_interactivo"
-        });
-      }
-    });
-  });
-
-  const form = root.querySelector(".dasc-di-form");
-
-  if (form) {
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      const data = new FormData(form);
-
-      const message = encodeURIComponent(
-        `Hola, quiero informes de Diseño Interactivo 🌐🎯.\n\nNombre: ${data.get("nombre")}\nCorreo: ${data.get("email")}\nCelular: ${data.get("telefono")}\nMensaje: ${data.get("mensaje")}`
-      );
-
-      if (typeof window.gtag === "function") {
-        window.gtag("event", "click_whatsapp", {
-          programa: "diseno_interactivo",
-          origen: "formulario_landing_diseno_interactivo"
-        });
-      }
-
-      window.open(
-        `https://wa.me/5212223606438?text=${message}`,
-        "_blank",
-        "noopener,noreferrer"
-      );
-    });
+  #dasc-diseno-interactivo .dasc-di-hero {
+    min-height: auto;
+    padding-top: 112px;
   }
-})();
+
+  #dasc-diseno-interactivo .dasc-di-panel {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 46px;
+  }
+
+  #dasc-diseno-interactivo .dasc-di-section-grid,
+  #dasc-diseno-interactivo .dasc-di-semester,
+  #dasc-diseno-interactivo .dasc-di-advantages,
+  #dasc-diseno-interactivo .dasc-di-contact,
+  #dasc-diseno-interactivo .dasc-di-session-card {
+    grid-template-columns: 1fr;
+  }
+
+  #dasc-diseno-interactivo .dasc-di-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #dasc-diseno-interactivo .dasc-di-session-box {
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  #dasc-diseno-interactivo .dasc-di-session-points {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  #dasc-diseno-interactivo {
+    font-size: 16px;
+  }
+
+  #dasc-diseno-interactivo .dasc-di-header {
+    top: 10px;
+    width: calc(100% - 20px);
+    min-height: 58px;
+    padding: 9px 10px;
+  }
+
+  #dasc-diseno-interactivo .dasc-di-mark {
+    width: 118px;
+    height: 38px;
+  }
+
+  #dasc-diseno-interactivo .dasc-di-hero {
+    padding-inline: 18px;
+    padding-bottom: 48px;
+  }
+
+  #dasc-diseno-interactivo h1 {
+    font-size: clamp(3.35rem, 15vw, 4.45rem);
+    letter-spacing: -0.055em;
+  }
+
+  #dasc-diseno-interactivo h2 {
+    font-size: clamp(2.1rem, 10vw, 3.1rem);
+  }
+
+  #dasc-diseno-interactivo .dasc-di-section {
+    padding: 72px 18px;
+  }
+
+  #dasc-diseno-interactivo .dasc-di-card-grid,
+  #dasc-diseno-interactivo .dasc-di-subjects,
+  #dasc-diseno-interactivo .dasc-di-advantages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #dasc-diseno-interactivo .dasc-di-tabs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #dasc-diseno-interactivo .dasc-di-contact {
+    grid-template-columns: 1fr;
+  }
+
+  #dasc-diseno-interactivo .dasc-di-session-content,
+  #dasc-diseno-interactivo .dasc-di-session-box {
+    padding: 24px;
+  }
+
+  #dasc-diseno-interactivo .dasc-di-floating-wa {
+    width: 54px;
+    height: 54px;
+    right: 16px;
+    bottom: 16px;
+  }
+}
