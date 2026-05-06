@@ -4,338 +4,462 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Licenciatura en Diseño Interactivo | DASC</title>
-  <meta name="description" content="Estudia Diseño Interactivo en DASC. Crea interfaces, apps, animaciones, videojuegos y experiencias digitales." />
+  <title>Diseño Interactivo en Puebla | DASC</title>
+  <meta name="description" content="Estudia Diseño Interactivo en DASC Puebla. Crea interfaces, apps, animaciones, videojuegos y experiencias digitales con enfoque práctico y tecnológico." />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Diseño Interactivo en Puebla | DASC" />
+  <meta property="og:description" content="Crea interfaces, apps, animaciones, videojuegos y experiencias digitales que conectan diseño, tecnología y emoción." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/hero-diseno-interactivo.png" />
+  <meta name="theme-color" content="#bf1bcc" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
-  <div id="dasc-diseno-interactivo">
-    <section class="dasc-di-hero" aria-labelledby="dasc-di-title">
-      <header class="dasc-di-header">
-        <a class="dasc-di-brand" href="#" aria-label="DASC inicio">
-          <span class="dasc-di-mark" aria-hidden="true"></span>
-          <span class="dasc-di-brand-text">DASC</span>
-        </a>
+  <main class="dasc-page" id="top">
+    <section class="dasc-hero" aria-labelledby="hero-title">
+      <div class="dasc-hero__bg" aria-hidden="true"></div>
+      <div class="dasc-hero__overlay" aria-hidden="true"></div>
 
-        <nav class="dasc-di-nav" aria-label="Navegacion principal">
-          <a href="#dasc-di-experiencia">Experiencia</a>
-          <a href="#dasc-di-plan">Plan</a>
-          <a href="#dasc-di-sesion">Sesión informativa</a>
-          <a href="#dasc-di-campo">Campo laboral</a>
-          <a href="#dasc-di-contacto">Contacto</a>
+      <header class="dasc-header dasc-container" aria-label="Navegación principal">
+        <a class="dasc-logo" href="#top" aria-label="DASC Instituto Tecnológico Universitario"><span>DASC</span></a>
+
+        <nav class="dasc-nav" aria-label="Secciones de la página">
+          <a href="#experiencia">Experiencia</a>
+          <a href="#plan-estudios">Plan</a>
+          <a href="#sesion-informativa">Sesión informativa</a>
+          <a href="#campo-laboral">Campo laboral</a>
+          <a href="#contacto">Contacto</a>
         </nav>
 
         <a
-          class="dasc-di-button primary dasc-di-wa-link"
-          href="https://wa.me/5212223606438?text=Hola%2C%20quiero%20informes%20de%20Dise%C3%B1o%20Interactivo%20%F0%9F%8C%90%F0%9F%8E%AF"
+          class="dasc-header__wa js-wa-link"
+          href="https://wa.me/5212223606438"
           target="_blank"
-          rel="noreferrer"
-          data-wa-origin="header"
+          rel="noopener"
+          data-origin="header"
+          data-message="Hola, quiero informes de Diseño Interactivo 🌐🎯."
         >
           WhatsApp
         </a>
       </header>
 
-      <div class="dasc-di-hero-content">
-        <p class="dasc-di-eyebrow">Licenciatura</p>
+      <div class="dasc-container dasc-hero__grid">
+        <div class="dasc-hero__content">
+          <span class="dasc-kicker">Licenciatura</span>
+          <h1 id="hero-title">Diseño Interactivo</h1>
 
-        <h1 id="dasc-di-title">Diseño Interactivo</h1>
-
-        <p class="dasc-di-copy">
-          Crea interfaces, apps, animaciones, videojuegos y experiencias digitales que conectan diseño,
-          tecnología y emoción.
-        </p>
-
-        <div class="dasc-di-actions">
-          <a class="dasc-di-button primary" href="#dasc-di-contacto">Quiero informes</a>
-          <a class="dasc-di-button ghost" href="#dasc-di-plan">Ver plan de estudios</a>
-        </div>
-
-        <div class="dasc-di-metrics" aria-label="Datos destacados">
-          <span><strong>8</strong> semestres</span>
-          <span><strong>UI/UX</strong> + tecnología</span>
-          <span><strong>3D</strong> animación y videojuegos</span>
-        </div>
-      </div>
-
-      <aside class="dasc-di-panel" aria-label="Areas de creacion">
-        <span class="dasc-di-panel-kicker">Interactive stack</span>
-        <div class="dasc-di-stack-item"><span>01</span> Interfaces y experiencia de usuario</div>
-        <div class="dasc-di-stack-item"><span>02</span> Animación 2D, 3D y motion</div>
-        <div class="dasc-di-stack-item"><span>03</span> Apps, web y videojuegos</div>
-        <div class="dasc-di-stack-item"><span>04</span> Realidad virtual y aumentada</div>
-      </aside>
-    </section>
-
-    <section class="dasc-di-section dasc-di-intro dasc-di-section-grid" id="dasc-di-experiencia">
-      <div>
-        <p class="dasc-di-eyebrow">Da forma al futuro digital</p>
-        <h2>Diseña experiencias que se sienten, se usan y se recuerdan.</h2>
-      </div>
-
-      <div>
-        <p>
-          El Diseño Interactivo fusiona programación, arte, tecnología e investigación para desarrollar
-          soluciones digitales funcionales, intuitivas y memorables. En DASC aprenderás a crear productos
-          que responden a necesidades reales: desde una app móvil hasta una página web, una animación,
-          un videojuego o una experiencia inmersiva.
-        </p>
-
-        <p>
-          La carrera está pensada para perfiles creativos con curiosidad tecnológica: personas que quieren
-          entender al usuario, prototipar ideas, construir interfaces y contar historias a través de medios digitales.
-        </p>
-      </div>
-    </section>
-
-    <section class="dasc-di-section" aria-labelledby="dasc-di-crear">
-      <div class="dasc-di-heading">
-        <p class="dasc-di-eyebrow">Lo que vas a crear</p>
-        <h2 id="dasc-di-crear">Una carrera para construir portafolio desde el primer proyecto.</h2>
-      </div>
-
-      <div class="dasc-di-card-grid">
-        <article class="dasc-di-card">
-          <span class="dasc-di-icon">UX</span>
-          <h3>Experiencia de usuario</h3>
-          <p>Interfaces intuitivas, usabilidad, accesibilidad, pruebas con usuarios y arquitectura de información.</p>
-        </article>
-
-        <article class="dasc-di-card">
-          <span class="dasc-di-icon">3D</span>
-          <h3>Animación y modelado</h3>
-          <p>Dibujo, escultura digital, modelado 3D, iluminación, render, motion, efectos especiales y video.</p>
-        </article>
-
-        <article class="dasc-di-card">
-          <span class="dasc-di-icon">APP</span>
-          <h3>Apps, web y programación</h3>
-          <p>Programación para diseño, interactivos, desarrollo de interfaces, aplicaciones móviles y web.</p>
-        </article>
-
-        <article class="dasc-di-card">
-          <span class="dasc-di-icon">XR</span>
-          <h3>Ambientes inmersivos</h3>
-          <p>Realidad virtual, realidad aumentada, videojuegos, captura de movimiento y narrativas interactivas.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="dasc-di-section dasc-di-section-grid">
-      <div>
-        <p class="dasc-di-eyebrow">Perfil de egreso</p>
-        <h2>Creador de soluciones digitales con criterio visual y dominio técnico.</h2>
-      </div>
-
-      <div>
-        <p>
-          Como egresado podrás investigar, diseñar, prototipar y producir experiencias interactivas que comuniquen
-          procesos complejos de forma clara. Desarrollarás proyectos visuales, animaciones, videos, apps, videojuegos
-          e interfaces con una mirada estratégica hacia el usuario.
-        </p>
-
-        <ul class="dasc-di-list">
-          <li>Diseño de interfaces y productos digitales.</li>
-          <li>Producción de animación, video, 3D y efectos visuales.</li>
-          <li>Desarrollo de aplicaciones, sitios web y proyectos interactivos.</li>
-          <li>Integración de diseño, programación, contenido y marketing digital.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="dasc-di-section" id="dasc-di-plan" aria-labelledby="dasc-di-plan-title">
-      <div class="dasc-di-heading">
-        <p class="dasc-di-eyebrow">Plan de estudios</p>
-        <h2 id="dasc-di-plan-title">8 semestres para pasar de idea a experiencia interactiva.</h2>
-        <p class="dasc-di-registry">SE-SES/21/114/01/2881/2023/SIE</p>
-      </div>
-
-      <div class="dasc-di-tabs" role="tablist" aria-label="Semestres">
-        <button class="dasc-di-tab active" type="button" role="tab" aria-selected="true" data-semester="0">1</button>
-        <button class="dasc-di-tab" type="button" role="tab" aria-selected="false" data-semester="1">2</button>
-        <button class="dasc-di-tab" type="button" role="tab" aria-selected="false" data-semester="2">3</button>
-        <button class="dasc-di-tab" type="button" role="tab" aria-selected="false" data-semester="3">4</button>
-        <button class="dasc-di-tab" type="button" role="tab" aria-selected="false" data-semester="4">5</button>
-        <button class="dasc-di-tab" type="button" role="tab" aria-selected="false" data-semester="5">6</button>
-        <button class="dasc-di-tab" type="button" role="tab" aria-selected="false" data-semester="6">7</button>
-        <button class="dasc-di-tab" type="button" role="tab" aria-selected="false" data-semester="7">8</button>
-      </div>
-
-      <div class="dasc-di-semester">
-        <div>
-          <p class="dasc-di-semester-label">Primer semestre</p>
-          <h3 class="dasc-di-semester-title">Fundamentos creativos y tecnológicos</h3>
-        </div>
-
-        <ul class="dasc-di-subjects"></ul>
-      </div>
-    </section>
-
-    <section class="dasc-di-section dasc-di-info-session" id="dasc-di-sesion" aria-labelledby="dasc-di-sesion-title">
-      <div class="dasc-di-session-card">
-        <div class="dasc-di-session-content">
-          <p class="dasc-di-eyebrow">Sesión informativa</p>
-          <h2 id="dasc-di-sesion-title">Te invitamos a conocer la carrera de Diseño Interactivo.</h2>
-          <p>
-            Resuelve tus dudas sobre el plan de estudios, campo laboral, proceso de inscripción y cómo se vive
-            la carrera en DASC. Es una sesión pensada para aspirantes y familias que quieren tomar una decisión
-            con más claridad.
+          <p class="dasc-hero__lead">
+            Crea interfaces, apps, animaciones, videojuegos y experiencias digitales que conectan diseño,
+            tecnología y emoción.
           </p>
 
-          <div class="dasc-di-session-points">
-            <span>✅ Conoce el perfil de ingreso</span>
-            <span>🎮 Explora proyectos y áreas creativas</span>
-            <span>💬 Pregunta por costos e inscripción</span>
+          <div class="dasc-hero__badges" aria-label="Datos clave de la carrera">
+            <span>8 semestres</span>
+            <span>UI/UX + tecnología</span>
+            <span>3D, apps y videojuegos</span>
+            <span>Portafolio creativo</span>
           </div>
 
-          <div class="dasc-di-actions">
+          <div class="dasc-actions">
             <a
-              class="dasc-di-button primary dasc-di-wa-link"
-              href="https://wa.me/5212223606438?text=Hola%2C%20quiero%20registrarme%20a%20la%20sesi%C3%B3n%20informativa%20de%20Dise%C3%B1o%20Interactivo%20%F0%9F%8C%90%F0%9F%8E%AF"
+              class="dasc-btn dasc-btn--primary js-wa-link"
+              href="https://wa.me/5212223606438"
               target="_blank"
-              rel="noreferrer"
-              data-wa-origin="sesion_informativa"
+              rel="noopener"
+              data-origin="hero"
+              data-message="Hola, quiero informes de Diseño Interactivo 🌐🎯."
             >
-              Registrarme por WhatsApp
+              Quiero informes
             </a>
-            <a class="dasc-di-button ghost dark" href="#dasc-di-contacto">Solicitar información</a>
+            <a class="dasc-btn dasc-btn--ghost" href="#plan-estudios">Ver plan de estudios</a>
           </div>
         </div>
 
-        <aside class="dasc-di-session-box" aria-label="Detalles de la sesion informativa">
-          <span class="dasc-di-panel-kicker">Próxima sesión</span>
-          <div class="dasc-di-session-detail">
-            <strong>Modalidad</strong>
-            <span>Por confirmar</span>
-          </div>
-          <div class="dasc-di-session-detail">
-            <strong>Fecha</strong>
-            <span>Solicita disponibilidad</span>
-          </div>
-          <div class="dasc-di-session-detail">
-            <strong>Dirigido a</strong>
-            <span>Aspirantes y padres de familia</span>
-          </div>
+        <aside class="dasc-hero-card" aria-label="Enfoque de la carrera">
+          <span class="dasc-card-label">Interactive stack</span>
+          <ul>
+            <li><span>01</span>Interfaces y experiencia de usuario</li>
+            <li><span>02</span>Animación 2D, 3D y motion</li>
+            <li><span>03</span>Apps, web y videojuegos</li>
+            <li><span>04</span>Realidad virtual y aumentada</li>
+          </ul>
         </aside>
       </div>
     </section>
 
-    <section class="dasc-di-section" id="dasc-di-campo" aria-labelledby="dasc-di-campo-title">
-      <div class="dasc-di-heading">
-        <p class="dasc-di-eyebrow">Campo laboral</p>
-        <h2 id="dasc-di-campo-title">Perfiles para una industria digital en crecimiento.</h2>
-      </div>
+    <section class="dasc-section dasc-section--intro" id="experiencia" aria-labelledby="intro-title">
+      <div class="dasc-container dasc-split">
+        <div>
+          <span class="dasc-section-label">Da forma al futuro digital</span>
+          <h2 id="intro-title">Diseña experiencias que se sienten, se usan y se recuerdan.</h2>
+        </div>
 
-      <div class="dasc-di-work">
-        <article>
-          <h3>UX Designer</h3>
-          <p>Diseña experiencias claras, accesibles y atractivas para plataformas digitales.</p>
-        </article>
-
-        <article>
-          <h3>UI Designer</h3>
-          <p>Define composición, tipografía, color, interacción y sistemas visuales para interfaces.</p>
-        </article>
-
-        <article>
-          <h3>Mobile UX Designer</h3>
-          <p>Crea aplicaciones móviles optimizadas para hábitos, necesidades y contextos reales.</p>
-        </article>
-
-        <article>
-          <h3>Game Designer</h3>
-          <p>Participa en mecánicas, niveles, personajes, narrativa y experiencias jugables.</p>
-        </article>
-
-        <article>
-          <h3>Diseñador XR</h3>
-          <p>Construye experiencias de realidad virtual y aumentada para educación, marcas y entretenimiento.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="dasc-di-section dasc-di-advantages" aria-labelledby="dasc-di-ventajas">
-      <div>
-        <p class="dasc-di-eyebrow">Ventajas DASC</p>
-        <h2 id="dasc-di-ventajas">Formación práctica y conectada con la industria.</h2>
-      </div>
-
-      <div class="dasc-di-advantages-grid">
-        <span>Aulas inteligentes</span>
-        <span>Sin examen de admisión</span>
-        <span>Docentes especializados</span>
-        <span>Actualización constante</span>
-        <span>Enfoque integral</span>
-      </div>
-    </section>
-
-    <section class="dasc-di-section dasc-di-contact" id="dasc-di-contacto" aria-labelledby="dasc-di-contact-title">
-      <div>
-        <p class="dasc-di-eyebrow">Inscripciones e informes</p>
-        <h2 id="dasc-di-contact-title">Convierte tu creatividad en una carrera digital.</h2>
-        <p>Habla con un asesor educativo de DASC y resuelve tus dudas sobre ingreso, costos y proceso de inscripción.</p>
-
-        <div class="dasc-di-contact-links">
-          <a
-            class="dasc-di-button primary dasc-di-wa-link"
-            href="https://wa.me/5212223606438?text=Hola%2C%20quiero%20informes%20de%20Dise%C3%B1o%20Interactivo%20%F0%9F%8C%90%F0%9F%8E%AF"
-            target="_blank"
-            rel="noreferrer"
-            data-wa-origin="contacto"
-          >
-            Hablar por WhatsApp
-          </a>
-
-          <a class="dasc-di-button ghost dark" href="mailto:informes@dasc.edu.mx">
-            informes@dasc.edu.mx
-          </a>
+        <div class="dasc-rich-text">
+          <p>
+            El Diseño Interactivo fusiona programación, arte, tecnología e investigación para desarrollar
+            soluciones digitales funcionales, intuitivas y memorables.
+          </p>
+          <p>
+            En DASC aprenderás a crear productos que responden a necesidades reales: desde una app móvil
+            hasta una página web, una animación, un videojuego o una experiencia inmersiva.
+          </p>
+          <p>
+            Esta carrera está pensada para perfiles creativos con curiosidad tecnológica: personas que quieren
+            entender al usuario, prototipar ideas, construir interfaces y contar historias a través de medios digitales.
+          </p>
         </div>
       </div>
-
-      <form class="dasc-di-form">
-        <label>
-          Nombre completo
-          <input type="text" name="nombre" autocomplete="name" required />
-        </label>
-
-        <label>
-          Correo electrónico
-          <input type="email" name="email" autocomplete="email" required />
-        </label>
-
-        <label>
-          Celular
-          <input type="tel" name="telefono" autocomplete="tel" required />
-        </label>
-
-        <label>
-          Mensaje
-          <textarea name="mensaje" rows="4">Quiero informes de Diseño Interactivo.</textarea>
-        </label>
-
-        <button class="dasc-di-button primary" type="submit">
-          Enviar solicitud
-        </button>
-      </form>
     </section>
 
-    <a
-      class="dasc-di-floating-wa dasc-di-wa-link"
-      href="https://wa.me/5212223606438?text=Hola%2C%20quiero%20informes%20de%20Dise%C3%B1o%20Interactivo%20%F0%9F%8C%90%F0%9F%8E%AF"
-      target="_blank"
-      rel="noreferrer"
-      aria-label="WhatsApp DASC"
-      data-wa-origin="flotante"
-    >
-      ✆
-    </a>
-  </div>
+    <section class="dasc-section dasc-section--learn" aria-labelledby="learn-title">
+      <div class="dasc-container">
+        <span class="dasc-section-label">Lo que vas a crear</span>
+        <h2 id="learn-title" class="dasc-section-title">Una carrera para construir portafolio desde el primer proyecto.</h2>
+
+        <div class="dasc-card-grid dasc-card-grid--four">
+          <article class="dasc-card">
+            <span class="dasc-card__icon">UX</span>
+            <h3>Experiencia de usuario</h3>
+            <p>Diseña interfaces intuitivas, accesibles y enfocadas en las necesidades reales de las personas.</p>
+          </article>
+
+          <article class="dasc-card">
+            <span class="dasc-card__icon">3D</span>
+            <h3>Animación y modelado</h3>
+            <p>Explora dibujo, modelado 3D, motion, render, video y recursos visuales para proyectos digitales.</p>
+          </article>
+
+          <article class="dasc-card">
+            <span class="dasc-card__icon">APP</span>
+            <h3>Apps, web y programación</h3>
+            <p>Integra diseño y tecnología para crear interfaces, aplicaciones y experiencias interactivas.</p>
+          </article>
+
+          <article class="dasc-card">
+            <span class="dasc-card__icon">XR</span>
+            <h3>Ambientes inmersivos</h3>
+            <p>Desarrolla proyectos con realidad virtual, realidad aumentada, videojuegos y narrativas interactivas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dasc-section dasc-section--profile" aria-labelledby="profile-title">
+      <div class="dasc-container dasc-split dasc-split--center">
+        <div>
+          <span class="dasc-section-label">Perfil de egreso</span>
+          <h2 id="profile-title">Creador de soluciones digitales con criterio visual y dominio técnico.</h2>
+        </div>
+
+        <div class="dasc-rich-text">
+          <p>
+            Como egresado podrás investigar, diseñar, prototipar y producir experiencias interactivas que comuniquen
+            procesos complejos de forma clara.
+          </p>
+
+          <ul class="dasc-check-list">
+            <li>Diseña interfaces, productos digitales y experiencias centradas en el usuario.</li>
+            <li>Produce animación, video, modelado 3D y recursos visuales interactivos.</li>
+            <li>Desarrolla aplicaciones, sitios web, videojuegos y proyectos digitales.</li>
+            <li>Integra diseño, programación, contenido y marketing digital.</li>
+            <li>Construye portafolio con proyectos aplicables a industrias creativas y tecnológicas.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="dasc-section dasc-section--plan" id="plan-estudios" aria-labelledby="plan-title">
+      <div class="dasc-container dasc-plan-wrap">
+        <span class="dasc-section-label">Plan de estudios</span>
+        <h2 id="plan-title">8 semestres para pasar de idea a experiencia interactiva.</h2>
+        <p class="dasc-rvoe">SE-SES/21/114/01/2881/2023/SIE</p>
+
+        <div class="dasc-tabs" data-tabs>
+          <div class="dasc-tabs__nav" role="tablist" aria-label="Semestres de Diseño Interactivo">
+            <button class="dasc-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="semester-1" id="tab-1" data-tab="semester-1">1</button>
+            <button class="dasc-tab" type="button" role="tab" aria-selected="false" aria-controls="semester-2" id="tab-2" data-tab="semester-2">2</button>
+            <button class="dasc-tab" type="button" role="tab" aria-selected="false" aria-controls="semester-3" id="tab-3" data-tab="semester-3">3</button>
+            <button class="dasc-tab" type="button" role="tab" aria-selected="false" aria-controls="semester-4" id="tab-4" data-tab="semester-4">4</button>
+            <button class="dasc-tab" type="button" role="tab" aria-selected="false" aria-controls="semester-5" id="tab-5" data-tab="semester-5">5</button>
+            <button class="dasc-tab" type="button" role="tab" aria-selected="false" aria-controls="semester-6" id="tab-6" data-tab="semester-6">6</button>
+            <button class="dasc-tab" type="button" role="tab" aria-selected="false" aria-controls="semester-7" id="tab-7" data-tab="semester-7">7</button>
+            <button class="dasc-tab" type="button" role="tab" aria-selected="false" aria-controls="semester-8" id="tab-8" data-tab="semester-8">8</button>
+          </div>
+
+          <div class="dasc-tabs__content">
+            <article class="dasc-panel is-active" id="semester-1" role="tabpanel" aria-labelledby="tab-1">
+              <h3>Primer semestre</h3>
+              <ul>
+                <li>Introducción al diseño interactivo</li>
+                <li>Dibujo I</li>
+                <li>Diseño de algoritmos</li>
+                <li>Ingeniería para la creatividad</li>
+                <li>Teoría del diseño</li>
+                <li>Metodología de la investigación</li>
+                <li>Taller de lectura y redacción</li>
+              </ul>
+            </article>
+
+            <article class="dasc-panel" id="semester-2" role="tabpanel" aria-labelledby="tab-2" hidden>
+              <h3>Segundo semestre</h3>
+              <ul>
+                <li>Administración de proyectos</li>
+                <li>Dibujo II</li>
+                <li>Programación para el diseño</li>
+                <li>Guionismo</li>
+                <li>Historia del arte</li>
+                <li>Fundamentos de la animación</li>
+                <li>Inglés I</li>
+              </ul>
+            </article>
+
+            <article class="dasc-panel" id="semester-3" role="tabpanel" aria-labelledby="tab-3" hidden>
+              <h3>Tercer semestre</h3>
+              <ul>
+                <li>Proyecto interactivo I</li>
+                <li>Técnicas de representación digital</li>
+                <li>Programación de interactivos</li>
+                <li>Escultura</li>
+                <li>Fotografía artística</li>
+                <li>Tipografía</li>
+                <li>Inglés II</li>
+              </ul>
+            </article>
+
+            <article class="dasc-panel" id="semester-4" role="tabpanel" aria-labelledby="tab-4" hidden>
+              <h3>Cuarto semestre</h3>
+              <ul>
+                <li>Proyecto interactivo II</li>
+                <li>Modelado 3D I</li>
+                <li>Arte y sociedad</li>
+                <li>Fotografía digital</li>
+                <li>Animación 2D</li>
+                <li>Diseño sonoro</li>
+                <li>Inglés III</li>
+                <li>Mercadotecnia</li>
+              </ul>
+            </article>
+
+            <article class="dasc-panel" id="semester-5" role="tabpanel" aria-labelledby="tab-5" hidden>
+              <h3>Quinto semestre</h3>
+              <ul>
+                <li>Escultura digital</li>
+                <li>Programación orientada a eventos</li>
+                <li>Producción de video digital</li>
+                <li>Animación 3D I</li>
+                <li>Ética profesional</li>
+                <li>Inglés IV</li>
+                <li>Doblaje y locución</li>
+              </ul>
+            </article>
+
+            <article class="dasc-panel" id="semester-6" role="tabpanel" aria-labelledby="tab-6" hidden>
+              <h3>Sexto semestre</h3>
+              <ul>
+                <li>Proyecto interactivo III</li>
+                <li>Investigación de mercados</li>
+                <li>Desarrollo de videojuegos</li>
+                <li>Efectos especiales</li>
+                <li>Animación 3D II</li>
+                <li>Modelado 3D II</li>
+                <li>Diseño de información visual</li>
+                <li>Expresión verbal en el ámbito profesional</li>
+              </ul>
+            </article>
+
+            <article class="dasc-panel" id="semester-7" role="tabpanel" aria-labelledby="tab-7" hidden>
+              <h3>Séptimo semestre</h3>
+              <ul>
+                <li>Seminario de tesis</li>
+                <li>Ambientes virtuales</li>
+                <li>Desarrollo de aplicaciones móviles</li>
+                <li>Captura de movimiento</li>
+                <li>Iluminación y render</li>
+                <li>Desarrollo de interfaces</li>
+                <li>Diseño de experiencia y usabilidad</li>
+              </ul>
+            </article>
+
+            <article class="dasc-panel" id="semester-8" role="tabpanel" aria-labelledby="tab-8" hidden>
+              <h3>Octavo semestre</h3>
+              <ul>
+                <li>Proyecto interactivo IV</li>
+                <li>Sostenibilidad y competitividad</li>
+                <li>Arquitectura y diseño para la web</li>
+                <li>Derecho para el diseño</li>
+                <li>Comportamiento organizacional</li>
+                <li>Interacción cognitiva</li>
+                <li>Marketing digital</li>
+                <li>Diseño de marca e imagen</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dasc-section dasc-section--session" id="sesion-informativa" aria-labelledby="session-title">
+      <div class="dasc-container dasc-session-card">
+        <div>
+          <span class="dasc-section-label dasc-section-label--dark">Sesión informativa</span>
+          <h2 id="session-title">Te invitamos a conocer la carrera de Diseño Interactivo.</h2>
+          <p>
+            Resuelve tus dudas sobre el plan de estudios, campo laboral, proyectos creativos, costos y proceso de inscripción.
+            Es una sesión pensada para aspirantes y familias que quieren tomar una decisión con más claridad.
+          </p>
+
+          <div class="dasc-session__chips">
+            <span>Conoce el perfil de ingreso</span>
+            <span>Explora proyectos digitales</span>
+            <span>Pregunta por costos e inscripción</span>
+          </div>
+
+          <a
+            class="dasc-btn dasc-btn--primary js-wa-link"
+            href="https://wa.me/5212223606438"
+            target="_blank"
+            rel="noopener"
+            data-origin="sesion-informativa"
+            data-message="Hola, quiero registrarme a la sesión informativa de Diseño Interactivo 🌐🎯."
+          >
+            Registrarme por WhatsApp
+          </a>
+        </div>
+
+        <aside class="dasc-session__box" aria-label="Datos de la sesión informativa">
+          <div><strong>Próxima sesión</strong><span>Disponible semanalmente</span></div>
+          <div><strong>Modalidad</strong><span>Solicita disponibilidad</span></div>
+          <div><strong>Fecha</strong><span>Agenda con un asesor</span></div>
+          <div><strong>Dirigida a</strong><span>Aspirantes y padres de familia</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="dasc-section dasc-section--jobs" id="campo-laboral" aria-labelledby="jobs-title">
+      <div class="dasc-container">
+        <span class="dasc-section-label">Campo laboral</span>
+        <h2 id="jobs-title" class="dasc-section-title">Perfiles para una industria digital en crecimiento.</h2>
+
+        <div class="dasc-card-grid dasc-card-grid--five">
+          <article class="dasc-card">
+            <span class="dasc-card__icon">UX</span>
+            <h3>UX Designer</h3>
+            <p>Diseña experiencias claras, accesibles y atractivas para plataformas digitales.</p>
+          </article>
+
+          <article class="dasc-card">
+            <span class="dasc-card__icon">UI</span>
+            <h3>UI Designer</h3>
+            <p>Define composición, tipografía, color, interacción y sistemas visuales para interfaces.</p>
+          </article>
+
+          <article class="dasc-card">
+            <span class="dasc-card__icon">APP</span>
+            <h3>Mobile UX Designer</h3>
+            <p>Crea aplicaciones móviles optimizadas para hábitos, necesidades y contextos reales.</p>
+          </article>
+
+          <article class="dasc-card">
+            <span class="dasc-card__icon">🎮</span>
+            <h3>Game Designer</h3>
+            <p>Participa en mecánicas, niveles, personajes, narrativa y experiencias jugables.</p>
+          </article>
+
+          <article class="dasc-card">
+            <span class="dasc-card__icon">XR</span>
+            <h3>Diseñador XR</h3>
+            <p>Construye experiencias de realidad virtual y aumentada para educación, marcas y entretenimiento.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dasc-section dasc-section--advantages" aria-labelledby="advantages-title">
+      <div class="dasc-container dasc-advantages">
+        <div>
+          <span class="dasc-section-label">Ventajas DASC</span>
+          <h2 id="advantages-title">Formación práctica y conectada con la industria creativa.</h2>
+        </div>
+
+        <div class="dasc-benefits">
+          <article><strong>Aulas inteligentes</strong></article>
+          <article><strong>Docentes especializados</strong></article>
+          <article><strong>Sin examen de admisión</strong></article>
+          <article><strong>Enfoque práctico</strong></article>
+          <article><strong>Actualización constante</strong></article>
+          <article><strong>Portafolio desde proyectos</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dasc-section dasc-section--contact" id="contacto" aria-labelledby="contact-title">
+      <div class="dasc-container dasc-contact-grid">
+        <div>
+          <span class="dasc-section-label">Inscripciones e informes</span>
+          <h2 id="contact-title">Convierte tu creatividad en una carrera digital.</h2>
+          <p>
+            Habla con un asesor educativo de DASC y recibe información sobre el plan, costos, becas y proceso de inscripción.
+          </p>
+
+          <div class="dasc-contact-actions">
+            <a
+              class="dasc-mini-btn js-wa-link"
+              href="https://wa.me/5212223606438"
+              target="_blank"
+              rel="noopener"
+              data-origin="contacto-boton"
+              data-message="Hola, quiero informes de Diseño Interactivo 🌐🎯."
+            >
+              Hablar por WhatsApp
+            </a>
+            <a class="dasc-mini-btn" href="mailto:informes@dasc.edu.mx">informes@dasc.edu.mx</a>
+          </div>
+        </div>
+
+        <form class="dasc-form" id="leadForm">
+          <label>
+            Nombre completo
+            <input type="text" name="nombre" placeholder="Escribe tu nombre" required />
+          </label>
+
+          <label>
+            Correo electrónico
+            <input type="email" name="correo" placeholder="correo@ejemplo.com" required />
+          </label>
+
+          <label>
+            Celular
+            <input type="tel" name="celular" placeholder="222 000 0000" required />
+          </label>
+
+          <label>
+            Mensaje
+            <textarea name="mensaje" rows="4" placeholder="Quiero información de Diseño Interactivo."></textarea>
+          </label>
+
+          <button class="dasc-btn dasc-btn--primary" type="submit">Enviar solicitud</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <a
+    class="dasc-wa-float js-wa-link"
+    href="https://wa.me/5212223606438"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contactar por WhatsApp"
+    data-origin="whatsapp-flotante"
+    data-message="Hola, quiero informes de Diseño Interactivo 🌐🎯."
+  >
+    WhatsApp
+  </a>
 
   <script src="./script.js"></script>
 </body>
