@@ -1,11 +1,12 @@
-# Landing DASC | Diseño Interactivo | Brand Match
+# DASC | Diseño Interactivo | Brand Match v2
 
-Versión actualizada con el estilo visual del template brand match de Ingeniería Industrial.
+Esta versión usa como base directa el template visual de Ingeniería Industrial.
+Solo cambia contenido, color de carrera, hero y mensajes.
 
-## Estructura
+## Archivos
 
 ```text
-diseno-interactivo/
+diseno-interactivo-brand-match-v2/
 ├── index.html
 ├── styles.css
 ├── script.js
@@ -14,10 +15,6 @@ diseno-interactivo/
     └── logo-DASC-Blanco.png
 ```
 
-## Notas
+## Nota importante
 
-- Diseño Interactivo no menciona HyFlex.
-- WhatsApp configurado a `5212223606438`.
-- Mensajes con identificador `🌐🎯`.
-- Evento GA: `click_whatsapp`.
-- Funciona en GitHub Pages.
+Diseño Interactivo no menciona HyFlex.
